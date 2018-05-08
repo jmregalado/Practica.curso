@@ -30,7 +30,9 @@ namespace Practica.curso
 
 
                 Chrome.Navigate().GoToUrl("http://plus.certiport.com/plus3/#/login");
+                Console.WriteLine("✔ Introduciendo el email: " + Email);
                 IWebElement EmailElement = Chrome.FindElement(By.XPath("//*[@id='inputUsername']"));
+                Console.WriteLine("✔ Introducciendo password");
                 EmailElement.SendKeys(Email);
                 IWebElement PasswordElement = Chrome.FindElement(By.XPath("//*[@id='inputPassword']"));
                 PasswordElement.SendKeys(Password);
